@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Eden Signature</title>
-    </head>
+
+<head>
+    <title>Eden Signature</title>
+</head>
+
 <body style="background-color: black;">
-    <object data="es-web-pdf.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="800px">
-      <p>Unable to display PDF file. <a href="es-web-pdf.pdf">Download</a> instead.</p>
-    </object>
+    <div class="desk">
+        <object data="es-web-pdf.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%"
+            height="800px">
+            <p>Please download the PDF to view it: <a href="es-web-pdf.pdf">Download PDF</a></p>
+        </object>
+    </div>
+    <div class="video-container">
+        <iframe src="ES-DESIGN-VIDEO.mp4" frameborder="0" allowfullscreen></iframe>
+    </div>
 </body>
+
 </html>
+
+<style>
+    .desk {
+        display: none;
+    }
+    .video-container {
+        display: block;
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    @media only screen and (min-width: 768px) {
+        .video-container {
+            display: none;
+        }
+
+        .desk {
+            display: block;
+        }
+    }
+</style>
